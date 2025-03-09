@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:fls="http://flussi.mds.it/FlsSicof_2" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://flussi.mds.it/FlsSicof_2" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="TipoTrasmissione">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[IVC]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IdAccesso">
+		<xs:restriction base="xs:int">
+			<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IdNucleo">
+		<xs:restriction base="xs:int">
+			<xs:maxInclusive value="9999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegioneErogazione">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="010"/>
+			<xs:pattern value="020"/>
+			<xs:pattern value="030"/>
+			<xs:pattern value="041"/>
+			<xs:pattern value="042"/>
+			<xs:pattern value="050"/>
+			<xs:pattern value="060"/>
+			<xs:pattern value="070"/>
+			<xs:pattern value="080"/>
+			<xs:pattern value="090"/>
+			<xs:pattern value="100"/>
+			<xs:pattern value="110"/>
+			<xs:pattern value="120"/>
+			<xs:pattern value="130"/>
+			<xs:pattern value="140"/>
+			<xs:pattern value="150"/>
+			<xs:pattern value="160"/>
+			<xs:pattern value="170"/>
+			<xs:pattern value="180"/>
+			<xs:pattern value="190"/>
+			<xs:pattern value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CodASLErogazione">
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+			<xs:pattern value="[0-9]{3}"/>
+			<xs:pattern value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CodiceConsultorioErogazione">
+		<xs:restriction base="xs:string">
+			<xs:length value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatoEstero">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IdCiclo">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="9999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DiagnosiRilevata">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SupportoSociale">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-3]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MandatoUnitaGiudz">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-2]{1}"/>
+			<xs:pattern value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProgPrest">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AreaAtt">
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+			<xs:pattern value="[a-fA-F]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SottoAreaAtt">
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+			<xs:pattern value="9999"/>
+			<xs:pattern value="[a-fA-F]{1}.[0-1]{1}[0-9]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoPres">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+			<xs:pattern value="999"/>
+			<xs:pattern value="[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumIncontriPrev">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DataPrenotazione">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="DataIniPres">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="DataPresuntaFinePres">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="SedePres">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-5]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MediazioneCulturale">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-2]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PresMultiProfessionale">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-2]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PersonaleCoinvolto_1">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-8]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PersonaleCoinvolto_2">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PersonaleCoinvolto_3">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PersonaleCoinvolto_4">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TerziCoinvolti_1">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+			<xs:pattern value="10"/>
+			<xs:pattern value="11"/>
+			<xs:pattern value="12"/>
+			<xs:pattern value="13"/>
+			<xs:pattern value="14"/>
+			<xs:pattern value="15"/>
+			<xs:pattern value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TerziCoinvolti_2">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+			<xs:pattern value="10"/>
+			<xs:pattern value="11"/>
+			<xs:pattern value="12"/>
+			<xs:pattern value="13"/>
+			<xs:pattern value="14"/>
+			<xs:pattern value="15"/>
+			<xs:pattern value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TerziCoinvolti_3">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]{1}"/>
+			<xs:pattern value="10"/>
+			<xs:pattern value="11"/>
+			<xs:pattern value="12"/>
+			<xs:pattern value="13"/>
+			<xs:pattern value="14"/>
+			<xs:pattern value="15"/>
+			<xs:pattern value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Data_F">
+		<xs:restriction base="xs:string">
+			<xs:length value="10"/>
+			<xs:pattern value="(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-(19|20)\d\d(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])"/>
+			<xs:pattern value="9999999999"/>
+			<xs:pattern value="8888888888"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Data_F2">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-(19|20)\d\d(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Trasmissione">
+		<xs:complexType>
+			<xs:attribute name="Tipo" type="fls:TipoTrasmissione" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Erogazione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodRegioneErg" type="fls:RegioneErogazione"/>
+				<xs:element name="CodASLErg" type="fls:CodASLErogazione"/>
+				<xs:element name="CodConsultorio" type="fls:CodiceConsultorioErogazione"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FlsSicof_2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fls:Accesso" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Accesso">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fls:Trasmissione"/>
+				<xs:element ref="fls:Erogazione"/>
+				<xs:element ref="fls:Valutazione" minOccurs="0"/>
+				<xs:element ref="fls:Prestazione" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="Data" type="fls:Data_F2" use="required"/>
+			<xs:attribute name="IdAccesso" type="fls:IdAccesso" use="optional"/>
+			<xs:attribute name="IdNucleo" type="fls:IdNucleo" use="optional"/>
+			<xs:attribute name="IdCiclo" type="fls:IdCiclo"/>
+			<xs:attribute name="MandatoGdz" type="fls:MandatoUnitaGiudz" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Valutazione" nillable="false">
+		<xs:complexType>
+			<xs:attribute name="Diagnosi" type="fls:DiagnosiRilevata"/>
+			<xs:attribute name="SupportoSociale" type="fls:SupportoSociale"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Prestazione">
+		<xs:complexType>
+			<xs:attribute name="AreaAttivita" type="fls:AreaAtt" use="required"/>
+			<xs:attribute name="SottoAreaAttivita" type="fls:SottoAreaAtt" use="required"/>
+			<xs:attribute name="TipoPrestazione" type="fls:TipoPres" use="required"/>
+			<xs:attribute name="NumeroIncontriPrevisti" type="fls:NumIncontriPrev" use="required"/>
+			<xs:attribute name="DataPrenotazione" type="fls:Data_F" use="required"/>
+			<xs:attribute name="DataInizioCicloPrestazioni" type="fls:Data_F" use="required"/>
+			<xs:attribute name="DataPresuntaFinePrestazioni" type="fls:Data_F" use="required"/>
+			<xs:attribute name="SedePrestazione" type="fls:SedePres" use="required"/>
+			<xs:attribute name="MediazioneCulturale" type="fls:MediazioneCulturale"/>
+			<xs:attribute name="PrestazioneMultiProfessionale" type="fls:PresMultiProfessionale" use="required"/>
+			<xs:attribute name="PersonaleCoinvolto_1" type="fls:PersonaleCoinvolto_1" use="required"/>
+			<xs:attribute name="PersonaleCoinvolto_2" type="fls:PersonaleCoinvolto_2"/>
+			<xs:attribute name="PersonaleCoinvolto_3" type="fls:PersonaleCoinvolto_3"/>
+			<xs:attribute name="PersonaleCoinvolto_4" type="fls:PersonaleCoinvolto_4"/>
+			<xs:attribute name="TerziCoinvolti_1" type="fls:TerziCoinvolti_1" use="required"/>
+			<xs:attribute name="TerziCoinvolti_2" type="fls:TerziCoinvolti_2" use="required"/>
+			<xs:attribute name="TerziCoinvolti_3" type="fls:TerziCoinvolti_3" use="required"/>
+			<xs:attribute name="ProgressivoPrestazione" type="fls:ProgPrest" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema> 

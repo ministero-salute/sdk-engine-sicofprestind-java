@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.17</version>
+    </parent>
+
+    <groupId>it.mds.sdk</groupId>
+    <artifactId>sdk-engine-sicofprestind-java</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
+        <!-- sdk props -->
+        <!--
+            <gestoreanagrafiche.version>0.0.5-SNAPSHOT</gestoreanagrafiche.version>
+            <libreriaregole.version>1.0.0-SNAPSHOT</libreriaregole.version>
+            <apigateway.version>0.0.5-SNAPSHOT</apigateway.version>
+            <gestoreesiti.version>0.0.5-SNAPSHOT</gestoreesiti.version>
+            <connettoremds.version>0.0.5-SNAPSHOT</connettoremds.version>
+          -->
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>it.mds.sdk</groupId>
+                <artifactId>components</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!-- sdk deps -->
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>engine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>reader-csv</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>validation-xmlruleparser</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>output-mustachetemplate</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>sender-gaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>run-jsonstore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>inesiti-mustachefilewriter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.mds.sdk</groupId>
+            <artifactId>sender-gaf-response-processor</artifactId>
+        </dependency>
+
+        <!-- jdbc deps -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.40.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.17</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

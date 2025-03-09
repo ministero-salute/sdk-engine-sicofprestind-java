@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fls:FlsSicof_2 xmlns:fls="http://flussi.mds.it/FlsSicof_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://flussi.mds.it/FlsSicof_2 SICOF_PREIND.XSD">
+	<fls:Accesso Data="01-01-1900-01-01" IdAccesso="99" IdNucleo="9999999" IdCiclo="9999999" MandatoGdz="9">
+		<fls:Trasmissione Tipo="I"/>
+		<fls:Erogazione>
+			<fls:CodRegioneErg>010</fls:CodRegioneErg>
+			<fls:CodASLErg>100</fls:CodASLErg>
+			<fls:CodConsultorio>010034</fls:CodConsultorio>
+		</fls:Erogazione>
+		<fls:Valutazione Diagnosi="010.01" SupportoSociale="1"/>
+		<fls:Prestazione AreaAttivita="A" SottoAreaAttivita="9999" TipoPrestazione="010" NumeroIncontriPrevisti="1" DataPrenotazione="9999999999" DataInizioCicloPrestazioni="01-01-2024-01-01" DataPresuntaFinePrestazioni="31-01-2024-01-31" SedePrestazione="1" MediazioneCulturale="1" PrestazioneMultiProfessionale="1" PersonaleCoinvolto_1="1" PersonaleCoinvolto_2="1" PersonaleCoinvolto_3="1" PersonaleCoinvolto_4="1" TerziCoinvolti_1="1" TerziCoinvolti_2="1" TerziCoinvolti_3="1" ProgressivoPrestazione="1"/>
+		<fls:Prestazione AreaAttivita="F" SottoAreaAttivita="F.01" TipoPrestazione="020" NumeroIncontriPrevisti="1" DataPrenotazione="8888888888" DataInizioCicloPrestazioni="01-01-2024-01-01" DataPresuntaFinePrestazioni="01-02-2024-02-01" SedePrestazione="1" MediazioneCulturale="1" PrestazioneMultiProfessionale="1" PersonaleCoinvolto_1="8" PersonaleCoinvolto_2="9" PersonaleCoinvolto_3="9" PersonaleCoinvolto_4="9" TerziCoinvolti_1="99" TerziCoinvolti_2="99" TerziCoinvolti_3="1" ProgressivoPrestazione="99"/>
+	</fls:Accesso>
+</fls:FlsSicof_2>

@@ -1,0 +1,15 @@
+spring:
+## Definizione connessione al DB
+  datasource:
+#    url: jdbc:sqlite:/sdk/db/validation.db?journal_mode=OFF&synchronous=OFF
+    url: jdbc:sqlite::memory:?journal_mode=OFF&synchronous=OFF
+    username:
+    password:
+    driverClassName: org.sqlite.JDBC
+
+
+springdoc:
+  api-docs:
+    path: /v1/flusso/api-docs
+  swagger-ui:
+    path: /v1/flusso/swagger-ui.html

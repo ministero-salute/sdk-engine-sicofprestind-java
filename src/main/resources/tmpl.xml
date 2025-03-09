@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<header>sicof/header.mustache</header>
+	<footer>sicof/footer.mustache</footer>
+	<node>
+		<openTemplate>sicof/open_test.mustache</openTemplate>
+		<closeTemplate>sicof/close_test.mustache</closeTemplate>
+		<comparingKeys>id_accesso;id_nucleo;reg_erog;asl_erog;cc_erog;data_acc
+		</comparingKeys>
+		<node>
+			<openTemplate>sicof/open_prestazione.mustache</openTemplate>
+			<comparingKeys>progr_prest
+			</comparingKeys>
+		</node>
+	</node>
+
+</template>

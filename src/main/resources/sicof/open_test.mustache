@@ -1,0 +1,8 @@
+	<fls:Accesso Data="{{data_acc}}" {{#id_accesso}}IdAccesso="{{id_accesso}}"{{/id_accesso}} IdNucleo="{{id_nucleo}}" IdCiclo="{{id_ciclo}}" MandatoGdz="{{mand_ug}}">
+		<fls:Trasmissione Tipo="{{tipo}}"/>
+		<fls:Erogazione>
+			<fls:CodRegioneErg>{{reg_erog}}</fls:CodRegioneErg>
+			<fls:CodASLErg>{{asl_erog}}</fls:CodASLErg>
+			<fls:CodConsultorio>{{cc_erog}}</fls:CodConsultorio>
+		</fls:Erogazione>
+		<fls:Valutazione Diagnosi="{{diagn_rilev}}" SupportoSociale="{{supp_soc}}"/>

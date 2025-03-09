@@ -1,0 +1,43 @@
+publiccodeYmlVersion: "0.4"
+name: sdk-engine-sicofprestind-java
+applicationSuite: SDK
+url: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
+landingURL: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
+softwareVersion: 1.0.0-SNAPSHOT
+releaseDate: 2025-03-09
+platforms:
+  - windows
+  - mac
+  - linux
+categories:
+  - workflow-management
+usedBy:
+  - Regioni
+developmentStatus: stable
+softwareType: standalone/web
+description:
+  it:
+    localisedName: sdk-engine-sicofprestind-java
+    shortDescription: SDK - Sistema informativo Consultori Familiari PRESTAZIONI
+      INDIVIDUALI
+    longDescription: Il microservizio ha come scopo l'acquisizione dei dati inviati
+      dalle Regioni in merito alle prestazioni consultoriali previste dall'articolo
+      24 <<Assistenza sociosanitaria ai minori, alle donne, alle coppie, alle
+      famiglie>> DPCM 12 gennaio 2017 (Nuovi LEA).
+    documentation: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
+    features:
+      - Verifica Dati
+      - Invio Dati
+legal:
+  license: BSD-3-Clause
+maintenance:
+  type: contract
+  contractors:
+    - name: Accenture SpA
+      until: 2026-01-01
+      email: accenture.technology.solutions@legalmail.it
+      website: https://www.accenture.com/it-it
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it
