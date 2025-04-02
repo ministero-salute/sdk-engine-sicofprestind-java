@@ -1,8 +1,8 @@
 publiccodeYmlVersion: "0.4"
-name: sdk-engine-sicofprestind-java
+name: SDK Flusso Consultori familiari - Engine Prestazione individuale/piccolo gruppo
 applicationSuite: SDK
 url: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
-landingURL: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
+landingURL: https://github.com/ministero-salute/sdk-engine-sicofprestind-java?tab=readme-ov-file#readme
 softwareVersion: 1.0.0-SNAPSHOT
 releaseDate: 2025-03-09
 platforms:
@@ -14,20 +14,19 @@ categories:
 usedBy:
   - Regioni
 developmentStatus: stable
-softwareType: standalone/web
+softwareType: standalone/backend
 description:
   it:
-    localisedName: sdk-engine-sicofprestind-java
-    shortDescription: SDK - Sistema informativo Consultori Familiari PRESTAZIONI
-      INDIVIDUALI
-    longDescription: Il microservizio ha come scopo l'acquisizione dei dati inviati
-      dalle Regioni in merito alle prestazioni consultoriali previste dall'articolo
-      24 <<Assistenza sociosanitaria ai minori, alle donne, alle coppie, alle
-      famiglie>> DPCM 12 gennaio 2017 (Nuovi LEA).
+    localisedName: SDK Flusso Consultori familiari - Engine Prestazione individuale/piccolo gruppo
+    shortDescription: SDK - Sistema informativo Consultori Familiari - Prestazione individuale/piccolo gruppo
+    longDescription: L'SDK ha come scopo la predisposizione del dataset e l’invio in merito ai dati di prestazioni consultoriali per individuo o piccolo gruppo, previste dall’articolo 24 «Assistenza sociosanitaria ai minori, alle donne, alle coppie, alle famiglie» DPCM 12 gennaio 2017 (Nuovi LEA).
     documentation: https://github.com/ministero-salute/sdk-engine-sicofprestind-java
     features:
       - Verifica Dati
       - Invio Dati
+it:
+  countryExtensionVersion: "1.0"
+  riuso: m_sa
 legal:
   license: BSD-3-Clause
 maintenance:
@@ -40,4 +39,4 @@ maintenance:
 localisation:
   localisationReady: false
   availableLanguages:
-    - it
+    - it-IT
