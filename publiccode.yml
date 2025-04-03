@@ -26,7 +26,8 @@ description:
       - Invio Dati
 it:
   countryExtensionVersion: "1.0"
-  riuso: m_sa
+  riuso:
+    codiceIPA: m_sa
 legal:
   license: BSD-3-Clause
 maintenance:
